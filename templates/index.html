@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Deployment</title>
+</head>
+<body>
+    <h1>Predict the type of the flower</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="SepalLengthCm" placeholder= 'SepalLength' required= 'required'/>
+        <input type= 'text' name="SepalWidthCm" placeholder= 'SepalWidth' required= 'required'/>
+        <input type= 'text' name="PetalLengthCm" placeholder="PetalLength" required= 'required'/>
+        <input type= 'text' name="PetalWidthCm" placeholder="PetalWidth" required= 'required'/>
+        <button type= 'submit' class= 'btn btn-primary btn-block btn-large'>Predict</button>
+    </form>
+
+    {{prediction_text}}
+</body>
+</html>
